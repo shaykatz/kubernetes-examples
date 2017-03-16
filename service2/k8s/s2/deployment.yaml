@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: service2-gateway-deployment2
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: example-service2
+    spec:
+      containers:
+      - name: service2
+        image: discovery-example2:second
+        imagePullPolicy: Never
